@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>swexycontact | Bio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    @keyframes gradientText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: url('https://cdna.artstation.com/p/assets/images/images/003/656/384/large/tom-jw-ak-47-g3.jpg?1476106935') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .click-text {
+      font-size: 3rem;
+      color: white;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+      text-transform: lowercase;
+      transition: transform 0.3s;
+    }
+    .click-text:hover {
+      transform: scale(1.1);
+    }
+    .container {
+      display: none;
+      position: relative;
+      z-index: 1;
+      max-width: 400px;
+      width: 100%;
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      backdrop-filter: blur(20px);
+      background-color: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    }
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 2px solid #444;
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      background: linear-gradient(270deg, #ff007a, #00f2ff, #7a00ff);
+      background-size: 600% 600%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientText 5s ease infinite;
+    }
+    p {
+      font-size: 0.95rem;
+      color: #aaa;
+      margin-bottom: 2rem;
+      text-transform: lowercase;
+    }
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .icon-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s;
+    }
+    .icon-link:hover {
+      transform: scale(1.1);
+    }
+    .icon-link img {
+      width: 28px;
+      height: 28px;
+    }
+    .footer {
+      font-size: 0.8rem;
+      margin-top: 2rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body onclick="showBio()">
+  <div class="overlay" id="overlay">
+    <div class="click-text">click</div>
+  </div>
+  <div class="container" id="bio">
+    <img class="avatar" src="https://cdn.discordapp.com/avatars/1393296644946264084/928785f747f4402d07acbffa633aea34.png?size=1024" alt="swexy profile" />
+    <h1>swexycontact</h1>
+    <p>swexy is a small kid who does some skidding stuff</p>
+    <div class="icons">
+      <a class="icon-link" href="https://www.instagram.com/fleacik/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+      </a>
+      <a class="icon-link" href="https://www.youtube.com/@fleacik" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+      </a>
+      <a class="icon-link" href="https://discord.com/users/1393296644946264084" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord">
+      </a>
+    </div>
+    <div class="footer">made by swexycontact</div>
+  </div>
+
+  <script>
+    function showBio() {
+      document.getElementById('overlay').style.display = 'none';
+      document.getElementById('bio').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
